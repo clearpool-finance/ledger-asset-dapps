@@ -1,0 +1,39 @@
+{
+    "blockchainName": "arbitrum",
+    "chainId": 42161,
+    "contracts": [
+        {
+            "address": "0x99c10a7abd93b2db6d1a2271e69f268a2c356b80",
+            "contractName": "Dynamic Pool Factory",
+            "selectors": {
+                "0xd212a642": {
+                    "erc20OfInterest": [],
+                    "method": "withdrawReward",
+                    "plugin": "Clearpool"
+                }
+            }
+        },
+        {
+            "address": "0xe746cd792677f894ba1b8ecebb84bf006ba6a2d7",
+            "contractName": "Dynamic Pool Auction",
+            "selectors": {
+                "0x59d667a5": {
+                    "erc20OfInterest": [],
+                    "method": "bid",
+                    "plugin": "Clearpool"
+                },
+                "0x06735cb0": {
+                    "erc20OfInterest": [],
+                    "method": "increaseBid",
+                    "plugin": "Clearpool"
+                },
+                "0x4b627eab": {
+                    "erc20OfInterest": [],
+                    "method": "resolveAuctionWithoutGoverment",
+                    "plugin": "Clearpool"
+                }
+            }
+        }
+    ],
+    "name": "Clearpool"
+}
